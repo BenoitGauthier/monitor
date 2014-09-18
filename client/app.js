@@ -16,7 +16,9 @@ var aCollectors = [];
 
 for (var i = 0; i < aFiles.length; i++) {
 
-	aCollectors[aCollectors.length] = require(__dirname + '/collectors/' + aFiles[i]);
+	 var instance = require(__dirname + '/collectors/' + aFiles[i]);
+     instance.init();
+     aCollectors[aCollectors.length] = instance;
 
 }
 

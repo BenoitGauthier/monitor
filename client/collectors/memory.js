@@ -37,7 +37,7 @@ function collect() {
 }
 
 function init() {
-
+	fw.logger.trace("Memory collector init");
 }
 
 exports.collect = collect;
