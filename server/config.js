@@ -8,6 +8,4 @@
  */
 
 // Time between each collect loop
-exports.collectInterval = 1000;
-exports.serverHost = "localhost";
-exports.serverPort = 1387;
+exports.serverPort = 1337;
