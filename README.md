@@ -49,9 +49,9 @@ Required node modules
 =====================
 Here is a list of required node js modules:
 
-fs
-log4js
-http
-daemonize2
-mongojs
+	fs
+	log4js
+	http
+	daemonize2
+	mongojs
  
