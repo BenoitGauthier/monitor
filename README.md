@@ -36,13 +36,13 @@ Configuration
 =============
 Client configurations are found in ./client/config.js
 
-collectInterval			Interval in milliseconds between each collect call
-serverHost				Server host name
-serverPort				Server port number
+	collectInterval			Interval in milliseconds between each collect call
+	serverHost				Server host name
+	serverPort				Server port number
 
 Server configuration are found in ./server/config.js					
 
-serverPort				Server port number
+	serverPort				Server port number
 
 
 Required node modules
