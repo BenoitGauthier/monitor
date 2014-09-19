@@ -31,6 +31,7 @@ Collectors must export the following functions :
 	init()			will be called when object is initialy created
 	collect()		will be called at every interval, collection of data
 					must be done here.
+	close()			will be called when client is closed					
 
 Configuration
 =============
@@ -39,6 +40,9 @@ Client configurations are found in ./client/config.js
 	collectInterval			Interval in milliseconds between each collect call
 	serverHost				Server host name
 	serverPort				Server port number
+	logLevel				log4js log level TRACE, DEBUG, INFO, WARN, ERROR, FATAL
+	hostName				Hostname of the client or server, can be configured in config.js
+							if empty will be detected from computer hostname
 
 Server configuration are found in ./server/config.js					
 
@@ -50,6 +54,7 @@ Required node modules
 Here is a list of required node js modules:
 
 	fs
+	os
 	log4js
 	http
 	daemonize2

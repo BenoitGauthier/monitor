@@ -1,6 +1,6 @@
 /*
- *	Uptime collector
- *	This collector will read the uptime information of the server	
+ *	hd collector
+ *	This collector will read the hard drive information of the server	
  * 
  */
 
@@ -11,15 +11,14 @@ var aData = [];
 
 function collect() {
 
-
 }
 
 function init() {
-	fw.logger.trace("Uptime collector init");
+	fw.logger.trace("hd collector init");
 }
 
 function close() {
-	fw.logger.trace("Uptime collector closed");
+	fw.logger.trace("hd collector closed");
 }
 
 

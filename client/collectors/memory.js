@@ -51,6 +51,7 @@ function collect() {
 		
 		aData[aData.length] = {
 			type : 'meminfo',
+			hostname: fw.config.hostName,
 			timestamp : now.toJSON(),
 			data : aMemInfo
 		};
@@ -70,5 +71,10 @@ function init() {
 	fw.logger.trace("Memory collector init");
 }
 
+function close() {
+	fw.logger.trace("Memory collector closed");
+}
+
 exports.collect = collect;
 exports.init = init;
+exports.close = close;

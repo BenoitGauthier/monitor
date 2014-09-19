@@ -11,3 +11,5 @@
 exports.collectInterval = 1000;
 exports.serverHost = "localhost";
 exports.serverPort = 1387;
+exports.logLevel = 'TRACE';
+exports.hostName = '';
