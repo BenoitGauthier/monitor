@@ -38,17 +38,13 @@ function collect() {
 					sFormat = aValues[1];
 				}
 				
-				//fw.logger.trace('Key is = ' + key);
-				//fw.logger.trace('Value is = ' + value);
 				aMemInfo[aMemInfo.length] = {memorytype: key, value: sSize, format: sFormat};
 							
 				
 			}
 		}
 		
-		//console.log(aMemInfo);
-
-		
+		// Add info to the data array (buffer)
 		aData[aData.length] = {
 			type : 'meminfo',
 			hostname: fw.config.hostName,
@@ -58,10 +54,11 @@ function collect() {
 		
 	});
 
+	// Check if we har reached limit if so, send info to server
 	if (aData.length >= 5) {
 		fw.logger.trace('before post to server');
 		fw.postToServer(aData);		
-		//fw.logger.debug(aData);
+		// Clear data
 		aData = [];
 	}
 
@@ -72,6 +69,13 @@ function init() {
 }
 
 function close() {
+	
+	if (aData.length >= 1) {
+		fw.logger.trace('before post to server');
+		fw.postToServer(aData);		
+		aData = [];
+	}
+	
 	fw.logger.trace("Memory collector closed");
 }
 

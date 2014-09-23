@@ -67,7 +67,9 @@ function postToServer(data) {
 		});
 
 		response.on('end', function() {
-			console.log('Monitor server response = ' + str);
+			if (str != 'OK') {
+				fw.logger.error('Did not get OK from server');
+			}			
 		});
 
 	});
